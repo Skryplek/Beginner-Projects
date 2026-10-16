@@ -1,0 +1,839 @@
+body {
+    margin: 0;
+    background-color: black;
+    animation: przyciemnienie 0.8s ease;
+}
+
+@keyframes przyciemnienie {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+header {
+    border: 1px solid rgba(4, 0, 255, 0.233);
+    background-color: black;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 250px;
+    padding-right: 250px;
+}
+
+.nazwa {
+    font-size: 22px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.przyciski {
+    font-size: 15px;
+    transition: transform 0.4s ease, color 0.4s ease;
+}
+
+.przyciski:hover {
+    transform: translateY(-3px);
+    color: rgb(0, 174, 255);
+}
+
+.kolor {
+    color: rgb(0, 174, 255);
+}
+
+.nazwa-glowna {
+    animation: ukazanie 1s ease;
+    animation-fill-mode: backwards;
+}
+
+.opisanie {
+    animation: ukazanie1 1s ease;
+    animation-fill-mode: backwards;
+    animation-delay: 0.6s;
+}
+
+.glowny-opis {
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 45px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-top: 200px;
+    flex-direction: column;
+    position: relative;
+}
+
+@keyframes ukazanie {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes ukazanie1 {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.glowny-opis::after {
+    content: "";
+    display: block;
+    width: 200px;
+    height: 4px;
+    background-color: rgb(0, 174, 255);
+    margin-top: -76px;
+    border-radius: 30px;
+    box-shadow: 0 0 20px blue;
+    animation: ujawnienie 1s ease;
+    animation-fill-mode: backwards;
+    animation-delay: 0.7s;
+}
+
+@keyframes ujawnienie {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.przyciski-opis {
+    font-size: 18px;
+    display: flex;
+    gap: 20px;
+    position: relative;
+    z-index: 10;
+
+}
+
+.kliknij {
+    border: 1px solid rgba(0, 0, 255, 0);
+    border-radius: 20px;
+    padding: 10px;
+    background-color: blue;
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+    transition: box-shadow 0.4s ease, background-color 0.4s ease, border 0.7s ease;
+    animation: pojawienie 1s ease;
+    animation-fill-mode: backwards;
+    animation-delay: 1.2s;
+}
+
+@keyframes pojawienie {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.kliknij:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 255, 0.747);
+    background-color: rgba(0, 0, 255, 0.747);
+}
+
+.play {
+    width: 20px; 
+    height: 20px;
+}
+
+.play2 {
+    width: 30px; 
+    height: 30px;
+}
+
+.kliknij-v2 {
+    border: 1px solid rgba(255, 255, 255, 0);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    gap: 10px;
+    transition: box-shadow 0.4s ease, background-color 0.4s ease;
+    animation: pojawienie1 1s ease;
+    animation-fill-mode: backwards;
+    animation-delay: 1.2s;
+}
+
+@keyframes pojawienie1 {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.kliknij-v2:hover {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.815);
+    background-color: rgba(255, 255, 255, 0.815);
+}
+
+.cien {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    background: blue;
+    filter: blur(120px);
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.cien2 {
+    top: 300px;
+    right: 60px;
+}
+
+.cien-v2 {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: blue;
+    filter: blur(120px);
+    opacity: 0.8;
+    z-index: -1;
+}
+
+.cien3 {
+    top: 600px;
+    left: 30%;
+}
+
+.ikonka {
+    width: 40px; 
+    height: 40px;
+    border: 1px solid blue;
+    padding: 4px;
+    border-radius: 50%;
+    background-color: black;
+    position: absolute;
+    top: -25px;
+    left: 143px;
+}
+
+.karty {
+    display: grid;
+    grid-template-columns: repeat(1, 330px);
+    grid-template-rows: 200px 200px;
+    gap: 80px;
+    position: relative;
+    width: calc(100% - 160px);
+    margin: 0 auto;
+    row-gap: 55px;
+    z-index: 1;
+    justify-content: space-between;
+    grid-auto-flow: column;
+    top: -260px;
+    left: 120px;
+}
+
+.karta:nth-child(1) {
+    animation: wyjscie 1s ease;
+    animation-fill-mode: backwards;
+}
+
+.karta:nth-child(2) {
+    animation: wyjscie 1s ease;
+    animation-fill-mode: backwards;
+    animation-delay: 0.3s;
+}
+
+.karta:nth-child(3) {
+    animation: wyjscie1 1s ease;
+    animation-fill-mode: backwards;
+}
+
+.karta:nth-child(4) {
+    animation: wyjscie1 1s ease;
+    animation-fill-mode: backwards;
+    animation-delay: 0.3s;
+}
+
+@keyframes wyjscie {
+    0% {
+        transform: translateX(-140px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes wyjscie1 {
+    0% {
+        transform: translateX(140px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+.karta {
+    border: 1px solid rgba(0, 0, 255, 0.356);
+    border-radius: 20px;
+    width: 330px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    background: linear-gradient(135deg, rgba(0, 0, 255, 0.322), rgba(0, 0, 0, 0.342));
+    position: relative;
+    transition: transform 0.4s ease, border 0.4s ease;
+    cursor: pointer;
+}
+
+.karta:hover {
+    transform: scale(1.02);
+    border: 1px solid blue;
+}
+
+.tekst {
+    font-weight: 500;
+    color: rgb(182, 182, 182);
+}
+
+.karta-1 {
+    right: 200px;
+}
+@media (max-width: 1000px) {
+    .karty {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 1600px) {
+    .karty {
+        left: 100px;
+        width: calc(110% - 160px);
+    }
+}
+
+@media (max-width: 1450px) {
+    .karty {
+        left: 75px;
+        width: calc(115% - 160px);
+    }
+}
+
+.produkty {
+    display: grid;
+    grid-template-columns: repeat(4, 300px);
+    gap: 20px;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+.produkty:has(.serwer:hover) .serwer:not(:hover) {
+    filter: grayscale(100%);
+}
+
+.produkt-tlo {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.serwer {
+    border: 1px solid rgba(0, 0, 255, 0.048);
+    width: 270px;
+    height: 370px;
+    border-radius: 20px;
+    transition: transform 0.6s ease, filter 0.4s ease;
+    font-family: 'Inter', sans-serif;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.gta {
+    background-image: url(assets/gta5-1662829149472.webp);
+}
+
+.minecraft {
+    background-image: url(assets/minecraft.jpg);
+}
+
+.rust {
+    background-image: url(assets/OIP\ \(10\).webp);
+}
+
+.discord {
+    background-image: url(assets/discord.jpg);
+}
+
+.serwer:hover {
+    transform: scale(1.02);
+}
+
+.servers {
+    padding-left: 15px;
+}
+
+.cena {
+    font-size: 18px;
+}
+
+b {
+    color: white;
+}
+
+.pytania {
+    border: 1px solid rgba(25, 0, 255, 0.219);
+    color: rgb(236, 236, 236);
+    font-family: 'Inter', sans-serif;
+    width: 600px;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 255, 0.253);
+    position: relative;
+    top: 200px;
+    left: 120px;
+    font-size: 18px;
+    background-color: rgba(0, 0, 255, 0.11);
+    font-weight: 600;
+    cursor: pointer;
+    
+}
+
+summary {
+    color: white;
+    transition: color 0.5s ease,;
+}
+
+details {
+    interpolate-size: allow-keywords;
+}
+
+details::details-content {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.5s ease, content-visibility 0.5s ease allow-discrete;
+}
+
+details[open]::details-content {
+    height: auto;
+}
+
+details[open] summary {
+    color: blue;
+}
+
+summary {
+    list-style: none;
+}
+
+.faq {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.odpowiedz {
+    font-size: 16px; 
+    color: white;
+    font-weight: 500;
+}
+
+.zadawane-pytania {
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 40px;
+}
+
+.pytanie {
+    color: rgb(168, 167, 167);
+    font-family: 'Inter', sans-serif;
+}
+
+.tekst-po-prawej {
+    text-align: left;
+    width: 350px;
+    margin: 0 auto;
+    position: absolute;
+    right: 160px;
+    bottom: -160px;
+}
+
+.menu-btn {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    border: 1px solid white;
+    border-radius: 20px;
+    color: black;
+    background-color: white;
+    padding: 10px;
+    position: relative;
+    top: 20px;
+    transition: background-color 0.5s ease, box-shadow 0.5s ease, border 0.5s ease;
+    cursor: pointer;
+}
+
+.menu-btn:hover {
+    background-color: rgba(255, 255, 255, 0.87);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.781);
+    border: 1px solid rgba(255, 255, 255, 0.781);
+}
+
+@media (max-width: 2200px) {
+    .faq {
+        position: relative;
+        left: 200px;
+    }
+
+    .tekst-po-prawej {
+        position: relative;
+        top: -150px;
+        right: -460px;
+    }
+}
+
+@media (max-width: 1650px) {
+    .faq {
+        position: relative;
+        left: -5px;
+    }
+}
+
+.logo-gta {
+    width: 110px;
+    height: 60px;
+}
+
+.specyfikacje {
+    color: black;
+}
+
+.specyfikacja-serwera-gta {
+    display: grid;
+    grid-template-columns: repeat(3, 500px);
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 100px;
+}
+
+.box {
+    color: black;
+    font-family: 'Inter', sans-serif;
+    border: 2px solid blue;
+    width: 460px;
+    height: 490px;
+    background-color: white;
+    border-radius: 15px;
+    padding-top: 20px;
+    padding: 10px;
+    box-shadow: 0 0 10px blue;
+}
+
+.gorny-opis {
+    display: flex;
+}
+
+.opis-pod-pakietem {
+    font-size: 15px;
+    color: rgb(95, 95, 95);
+
+}
+
+.cena-pakietu {
+    color: black;
+    display: flex;
+    gap: 10px;
+}
+
+.ilosc-dni {
+    border: 1px solid rgba(192, 191, 191, 0.233);
+    border-radius: 20px;
+    background-color: rgba(179, 179, 179, 0.205);
+    width: 50px;
+    height: 20px;
+    text-align: center;
+    padding: 5px;
+    position: relative;
+    top: -5px;
+}
+
+.specyfikacje-serwera {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.czesci {
+    border: 2px solid blue;
+    width: 400px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 20px;
+    font-size: 14px;
+    padding: 4px;
+}
+
+.zamow {
+    border: 1px solid rgb(207, 207, 207);
+    background-color: rgb(206, 205, 205);
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 20px;
+    width: 300px;
+    color: black;
+    transition: box-shadow 0.5s ease, background-color 0.5s ease, border 0.5s ease;
+}
+
+.zamow:hover {
+    background-color: rgb(173, 173, 173);
+    border: 1px solid rgb(173, 173, 173);
+    box-shadow: 0 0 5px black;
+}
+
+.stopka {
+    border: 2px solid blue;
+    background: linear-gradient(135deg, rgba(0, 0, 255, 0.322), rgba(0, 0, 0, 0.342));
+    font-family: 'Inter', sans-serif;
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    border-radius: 40px;
+    color: rgb(211, 211, 211);
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.informacje {
+    display: flex;  
+    gap: 20px;
+    flex-direction: column;
+}
+
+.informacje a {
+    color: rgb(211, 211, 211);
+}
+
+.firma-info {
+    font-size: 17px;
+    font-weight: 600;
+    color: white;
+}
+
+.wybor {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.opcja {
+    transition: color 0.5s ease;
+}
+
+.opcja:hover {
+    color: white;
+}
+
+.logo-minecraft {
+    width: 120px;
+    height: 120px;
+}
+
+.napisz-wiadomosc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    border: 1px solid rgba(0, 0, 255, 0);
+    background: linear-gradient(135deg, rgba(0, 0, 255, 0.322), rgba(0, 0, 0, 0.342));;
+    width: 500px;
+    height: auto;
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 0 0 10px blue;
+    padding-bottom: 100px;  
+    margin-left: auto;
+    margin-right: 100px;
+}
+
+.kontakt {
+    font-family: 'Inter', sans-serif;
+}
+
+textarea {
+    font-family: 'Inter', sans-serif;
+    border: 1px solid black;
+    resize: vertical;
+    width: 400px;
+    height: 100px;
+    font-size: 16px;
+    padding-left: 20px;
+    padding-top: 10px;
+    border-radius: 10px;
+}
+
+textarea:focus {
+    outline: none;
+}
+
+input {
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 400px;
+    height: 40px;
+    font-size: 16px;
+    padding-left: 20px;
+}
+
+input:focus {
+    outline: none;
+}
+
+.pytanie {
+    font-weight: 600;
+    color: white;
+}
+
+.submit {
+    border: 1px solid black;
+    width: 400px;
+    height: 40px;
+    font-size: 16px;
+    margin-top: 20px;
+    border-radius: 20px;
+    background-color: blue;
+    color: white;
+    font-weight: 600;
+    transition: background-color 0.5s ease, box-shadow 0.5s ease, border 0.5s ease;
+    cursor: pointer;
+}
+
+.submit:hover {
+    background-color: rgba(0, 0, 255, 0.603);
+    box-shadow: 0 0 10px rgba(0, 0, 255, 0.603);
+    border: 1px solid rgba(0, 0, 255, 0);
+}
+
+.tekst-skontaktuj {
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 40px;
+}
+
+.tekst-informacja {
+    color: rgb(165, 165, 165);
+    font-family: 'Inter', sans-serif;
+    font-size: 17px;
+}
+
+.kontakt-kategoria {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 80px;
+}
+
+.panele {
+    margin-right: auto;
+    margin-left: 100px;
+}
+
+.nasze-community {
+    color: rgb(82, 82, 82);
+    font-size: 15px;
+    font-family: 'Inter', sans-serif;
+}
+
+.nasza-spolecznosc {
+    color: black;
+    font-size: 18px;
+    font-family: 'Inter', sans-serif;
+}
+
+.panel {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 300px;
+    height: 60px;
+    padding: 10px;
+}
+
+.kontakt-discord {
+    border: 3px solid blue;
+    border-radius: 20px;
+    transition: box-shadow 0.5s ease;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.kontakt-discord:hover {
+    box-shadow: 0 0 20px blue;
+}
+
+.ikona {
+    width: 45px;
+    height: 45px;
+    border: 2px solid blue;
+    border-radius: 30px;
+    padding: 5px;
+    background-color: rgba(0, 0, 255, 0.11);
+}
