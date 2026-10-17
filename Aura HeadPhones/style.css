@@ -1,0 +1,192 @@
+body {
+    background-color: black;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Inter', sans-serif;
+}
+
+.ikona-domek {
+    border: 2px solid gray;
+    border-radius: 50%;
+    background-color: gray;
+    padding: 5px;
+    width: 22px;
+    height: 22px;
+    transition: border 0.5s ease;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+    border: 1px solid gray;
+    border-radius: 50px;
+    width: 600px;
+    height: 50px;
+    padding: 5px;
+    margin: 0 auto;
+}
+
+.przycisk {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: 1px solid rgba(128, 128, 128, 0);
+    padding: 5px;
+    border-radius: 50px;
+    transition: border 0.7s ease, background-color 0.5s ease;
+}
+
+.przycisk:hover {
+    border: 1px solid gray;
+    background-color: gray;
+}
+
+.przycisk:hover .ikona-domek {
+    border: 2px solid white;
+}
+
+.przyciski {
+    transition: transform 0.5s ease;
+}
+
+.przyciski:hover {
+    transform: translateY(-3px);
+}
+
+.nazwa {
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 35px;
+}
+
+.gorna-czesc {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.przycisk-aplikacji {
+    font-size: 20px;
+    border: 1px solid gray;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    gap: 10px;
+    transition: background-color 0.5s ease;
+}
+
+.przycisk-aplikacji:hover {
+    background-color: gray;
+}
+
+.przycisk-aplikacji:hover .ikonka-strzalka {
+    border: 2px solid white;
+}
+
+.ikonka-strzalka {
+    border: 2px solid gray;
+    border-radius: 50%;
+    padding: 5px;
+    transition: border 0.5s ease;
+}
+
+
+
+.przycisk-ai {
+    border: 1px solid gray;
+    background-color: gray;
+    padding: 10px;
+    border-radius: 50px;
+    transition: background-color 0.5s ease, border 0.5s ease;
+}
+
+.przycisk-ai:hover {
+    background-color: rgb(104, 104, 104);
+    border: 1px solid rgb(104, 104, 104);
+}
+
+.odkryj-oferte {
+    width: 250px;
+}
+
+.poczuj {
+    background: linear-gradient(90deg, white, gray);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 55px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    width: fit-content;
+}
+
+.jakosc {
+    color: rgb(160, 160, 160);
+    font-family: 'Inter', sans-serif;
+    font-size: 19px;
+}
+
+.opis-glowny {
+    margin-left: 100px;
+    margin-right: auto;
+    margin-top: 140px;
+    margin-bottom: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.kobieta {
+    width: 700px;
+    height: 600px;
+    margin-top: 50px;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: 100px;
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-radius: 30%;
+}
+
+.strona-glowna {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cien {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    background: white;
+    filter: blur(120px);
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.cien1 {
+    width: 200px; 
+    height: 200px;
+    top: 550px;
+    left: 500px;
+}
+
+.cien2 {
+    width: 230px;
+    height: 230px;
+    top: 200px;
+    right: 200px;
+}
+
+.cien3 {
+    top: 150px;
+    left: 150px;
+}
