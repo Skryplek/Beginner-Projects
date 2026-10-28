@@ -1,0 +1,701 @@
+body {
+    background-color: black;
+    margin: 0 auto;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.938);
+    width: 100%;
+    left: 0;
+    height: auto;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.219)
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Inter', sans-serif;
+}
+
+.ikona-domek {
+    border: 2px solid gray;
+    border-radius: 50%;
+    background-color: gray;
+    padding: 5px;
+    width: 22px;
+    height: 22px;
+    transition: border 0.5s ease;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+    border: 1px solid gray;
+    border-radius: 50px;
+    width: 600px;
+    height: 50px;
+    padding: 5px;
+    margin: 0 auto;
+}
+
+.przycisk {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: 1px solid rgba(128, 128, 128, 0);
+    padding: 5px;
+    border-radius: 50px;
+    transition: border 0.7s ease, background-color 0.5s ease;
+}
+
+.przycisk:hover {
+    border: 1px solid gray;
+    background-color: gray;
+}
+
+.przycisk:hover .ikona-domek {
+    border: 2px solid white;
+}
+
+.przyciski {
+    transition: transform 0.5s ease;
+}
+
+.przyciski:hover {
+    transform: translateY(-3px);
+}
+
+.nazwa {
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 35px;
+}
+
+.gorna-czesc {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.przycisk-aplikacji {
+    font-size: 20px;
+    border: 1px solid gray;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    gap: 10px;
+    transition: background-color 0.5s ease;
+}
+
+.przycisk-aplikacji:hover {
+    background-color: gray;
+}
+
+.przycisk-aplikacji:hover .ikonka-strzalka {
+    border: 2px solid white;
+}
+
+.ikonka-strzalka {
+    border: 2px solid gray;
+    border-radius: 50%;
+    padding: 5px;
+    transition: border 0.5s ease;
+}
+
+.przycisk-ai {
+    border: 1px solid gray;
+    background-color: gray;
+    padding: 10px;
+    border-radius: 50px;
+    transition: background-color 0.5s ease, border 0.5s ease;
+}
+
+.przycisk-ai:hover {
+    background-color: rgb(104, 104, 104);
+    border: 1px solid rgb(104, 104, 104);
+}
+
+.odkryj-oferte {
+    width: 250px;
+}
+
+.poczuj {
+    background: linear-gradient(90deg, white, gray);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 55px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    width: fit-content;
+    margin-top: 130px;
+    margin-bottom: auto;
+}
+
+.jakosc {
+    color: rgb(160, 160, 160);
+    font-family: 'Inter', sans-serif;
+    font-size: 19px;
+}
+
+.opis-glowny {
+    margin-left: 100px;
+    margin-right: auto;
+    margin-top: 140px;
+    margin-bottom: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.kobieta {
+    width: 700px;
+    height: 600px;
+    margin-top: 130px;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: 100px;
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-radius: 30%;
+}
+
+.strona-glowna {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cien {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    background: white;
+    filter: blur(120px);
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.cien1 {
+    width: 200px; 
+    height: 200px;
+    top: 550px;
+    left: 500px;
+}
+
+.cien2 {
+    width: 230px;
+    height: 230px;
+    top: 200px;
+    right: 200px;
+}
+
+.cien3 {
+    top: 150px;
+    left: 150px;
+}
+
+.sekcja-glowna {
+    border: 1px solid rgba(128, 128, 128, 0.267);
+    padding: 10px;
+    padding-bottom: 40px;
+    
+}
+
+.sekcja-zakup {
+    padding: 130px;
+    border: 1px solid rgba(128, 128, 128, 0.267);
+}
+
+.zakup {
+    border: 1px solid gray; 
+    border-radius: 50px;
+    width: 1200px;
+    height: auto;
+    margin: 0 auto;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    box-shadow: 0 0 10px gray;
+    background-color: black;
+}
+
+.sluchawki {
+    width: 500px;
+    height: 500px;
+}
+
+.opis-sluchawek {
+    margin-left: auto;
+    margin-right: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.opis-sluchawek p {
+    margin: 0;
+}
+
+.nazwa-sluchawek {
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.kup-teraz {
+    width: 350px;
+    height: 30px;
+    font-size: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: rgb(158, 158, 158);
+    transition: box-shadow 0.5s ease, background-color 0.5s ease;
+    border: none;
+}
+
+
+.kup-teraz:hover {
+    box-shadow: 0 0 10px gray;
+    background-color: gray;
+}
+
+ul {
+    list-style: none;
+}
+
+.specyfikacja {
+    border: 1px solid gray;
+    padding: 5px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 0 5px white;
+    transition: box-shadow 0.5s ease;
+    cursor: pointer;
+}
+
+.specyfikacja:hover {
+    box-shadow: 0 0 10px white;
+}
+
+.lista {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.dostawa {
+    color: green;
+}
+
+.szary {
+    color: rgb(160, 160, 160);
+}
+
+.cena {
+    font-size: 25px;
+}
+
+.cien4 {
+    top: 1350px;
+    width: 200px;
+    height: 200px;
+    left: 500px;
+}
+
+.cien5 {
+    top: 1100px;
+    right: 100px;
+}
+
+.cien6 {
+    top: 1000px;
+}
+
+.sekcja-kafelki {
+    border: 1px solid rgba(128, 128, 128, 0.267);
+    padding: 10px;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    padding: 100px;
+    border-top: 1px solid transparent;
+}
+
+.kafelki {
+    display: grid;
+    grid-template-columns: repeat(2, 350px);
+    gap: 50px;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.naglowek-kafelka {
+    font-size: 20px;
+}
+
+.opis-kafelka {
+    color: rgb(190, 190, 190);
+}
+
+.kafelek {
+    border: 2px solid rgba(255, 255, 255, 0.514);
+    height: 200px;
+    width: 350px;
+    padding-left: 20px;
+    padding-top: 20px;
+    font-size: 15px;
+    border-radius: 15px;
+    cursor: pointer;
+    padding-bottom: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+    transition: box-shadow 0.5s ease;
+    background-color: black;
+}
+
+.kafelek::before {
+    content: "";
+    background: white;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 9px;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.kafelek:hover::before {
+    opacity: 1;
+}
+
+.kafelek:hover {
+    box-shadow: 0 0 10px white;
+}
+
+.ikonka-kafelka {
+    width: 35px;
+    height: 35px;
+}
+
+.kropki {
+    display: flex;
+    gap: 10px;
+}
+
+.kropka {
+    border: 1px solid rgba(255, 255, 255, 0);
+    border-radius: 50%;
+    width: 7px;
+    height: 7px;
+}
+
+.kropka-1 {
+    background: rgb(185, 185, 185);
+}
+
+.kropka-2 {
+    background: rgb(141, 141, 141);
+}
+
+.kropka-3 {
+    background: rgb(80, 80, 80);
+}
+
+.naglowek-sekcji-kafelki {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.wiecej-niz-dzwiek {
+    background: linear-gradient(90deg, white, gray);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.cien7 {
+    top: 2200px;
+    right: 400px;
+    width: 230px;
+    height: 230px;
+}
+
+.cien8 {
+    top: 1700px;
+    right: 100px;
+    width: 220px;
+    height: 220px;
+}
+
+.cien9 {
+    left: 100px;
+    top: 1800px;
+    width: 250px;
+    height: 250px;
+}
+
+.sekcja-stopka {
+    border: 1px solid rgba(128, 128, 128, 0.267);
+    padding: 10px;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    padding: 100px;
+    border-top: 1px solid transparent; 
+
+}
+
+.stopka {
+    border: 1px solid gray;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    height: auto;
+    padding-bottom: 40px;
+    box-shadow: 0 0 10px white;
+    width: 75%;
+    margin: 0 auto;
+}
+
+.media {
+    display: flex;
+    gap: 10px;
+}
+
+.ikona-media {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.5s ease;
+}
+
+.ikona-media:hover {
+    transform: scale(1.1);
+}
+
+.naglowek-stopki {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.przyciski-stopka {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.a-stopka {
+    transition: color 0.5s ease;
+}
+
+.a-stopka:hover {
+    color: white;
+}
+
+main {
+    font-family: 'Inter', sans-serif;
+}
+
+.naglowek-onas {
+    font-size: 50px;
+    margin-bottom: auto;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.emocje {
+    font-size: 40px;
+    font-weight: 700;
+    margin-top: 5px;
+    margin-bottom: auto;
+}
+
+.opis-onas {
+    color: white;
+    
+}
+
+.wierzymy-onas {
+    margin-top: 30px;
+    font-size: 18px;
+}
+
+.onas-onas {
+    font-weight: 700;
+    margin-bottom: auto;
+}
+
+.glowne-onas {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 150px;
+    align-items: center;
+    padding: 20px;
+    padding-right: 60px;
+    padding-left: 60px;
+    margin-bottom: auto;
+}
+
+.historia {
+    border: 2px solid rgba(128, 128, 128, 0.267);
+    border-radius: 20px;
+    padding: 20px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 80px;
+    box-shadow: 0 0 10px gray;
+    width: 88%;
+    margin: 0 auto;
+    height: auto;
+    margin-top: 60px;
+    margin-bottom: auto;
+}
+
+
+.pasja-onas {
+    font-size: 35px;
+    font-weight: 700;
+    margin-top: 7px;
+    margin-bottom: auto;
+    
+}
+
+.nasza-historia {
+    margin-bottom: auto;
+}
+
+.narodzenie-aura {
+    margin-top: 20px;
+}
+
+.rok {
+    font-size: 22px;
+    color: rgb(211, 211, 211);
+    font-weight: 500;
+    margin-bottom: auto;
+}
+
+.pomysl {
+    font-size: 18px;
+    margin-bottom: auto;
+    margin-top: 10px;
+}
+
+.opis-pomyslu {
+    color: rgb(170, 170, 170);
+    margin-top: 10px;
+}
+
+.daty {
+    display: flex;
+    gap: 45px;
+    z-index: 2;
+    width: max-content;
+}
+
+.sluchawki-zdjecie {
+    width: 440px;
+    height: 430px;
+    display: block;
+    margin: 0;
+    transform: translateX(-40px);
+    z-index: 0;
+    filter: brightness(80%);
+    border-radius: 50%;
+    border: 1px solid gray;
+    box-shadow: 0 0 20px gray;
+}
+
+.wyroznia {
+    border: 2px solid rgba(128, 128, 128, 0.267);
+    border-radius: 20px;
+    padding: 25px;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: auto;
+    margin: 50px auto 0;
+    box-shadow: 0 0 10px gray;
+    width: 80%;
+}
+
+.detal-onas {
+    color: gray;
+    font-size: 20px;
+}
+
+.przyciski-wyroznione {
+    border: 2px solid gray;
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+    box-shadow: 0 0 5px white;
+    margin-top: 35px;
+}
+
+.zdjecie-wyroznione {
+    width: 50px;
+    height: 45px;
+}
+
+.box-wyroznienia {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+    height: 100px;
+    width: 300px;
+}
+
+.naglowek-wyroznien {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: auto;
+}
+
+.opis-wyroznien {
+    color: rgb(179, 179, 179);
+    margin-top: 10px;
+    flex-shrink: 0;
+}
+
+.kafelki-wyroznione {
+    display: flex;
+    gap: 20px;
+}
+
+.nad-wyroznieniem {
+    display: flex;
+    justify-content: space-between
+}
+
+.lewo-wyroznienia {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 1560px) {
+    .wyroznia {
+        display: grid;
+        grid-template-columns: repeat(2, 90%);
+    }
+
+}
